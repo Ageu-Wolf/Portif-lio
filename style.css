@@ -1,0 +1,197 @@
+/* GERAL */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Fundo mais claro e suave */
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 15px;
+}
+
+/* HEADER */
+header {
+    background: #2c3e50; /* Azul escuro/quase preto */
+    color: #ecf0f1;
+    padding: 15px 0;
+    border-bottom: 5px solid #3498db; /* Azul vibrante */
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    font-size: 1.8em;
+}
+
+header nav {
+    float: right;
+    margin-top: 5px;
+}
+
+header nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1em;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #3498db;
+}
+
+/* HERO SECTION (SOBRE MIM) */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.hero img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #3498db;
+}
+
+.hero h2 {
+    color: #3498db;
+    margin-top: 5px;
+}
+
+.skills {
+    font-weight: 600;
+    color: #2c3e50;
+    background: #eaf1f7;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+/* PROJETOS (GRID DE CARDS) */
+#projetos {
+    padding: 40px 0;
+}
+
+#projetos h3 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+/* Layout de Grid para Cards */
+.projetos-grid {
+    display: grid;
+    /* Define colunas: 3 colunas em telas grandes, ou uma só em telas pequenas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Espaçamento entre os cards */
+}
+
+.projeto-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden; /* Garante que a imagem fique dentro do card */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.projeto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.projeto-card h4 {
+    color: #3498db;
+    padding: 15px 15px 5px;
+    margin: 0;
+}
+
+.projeto-card p {
+    padding: 0 15px;
+    font-size: 0.95em;
+}
+
+.tecnologias {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 10px;
+}
+
+.links {
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #3498db;
+}
+
+/* CONTATO E FOOTER */
+#contato {
+    padding: 40px 0;
+    text-align: center;
+}
+
+#contato p a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contato p a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* MEDIA QUERIES (Para Responsividade) */
+@media (max-width: 600px) {
+    header h1, header nav {
+        float: none;
+        text-align: center;
+    }
+    header nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    .hero {
+        padding: 40px 10px;
+    }
+}
